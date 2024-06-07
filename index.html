@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset='UTF-8'>
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Smoking Prediction</title>
+ 
+</head>
+<body style="background: #000;">
+    <div class="login">
+        <h1 style="color:Blue;">Prediction of Smoking based on Body Signals</h1>
+        <form action="{{ url_for("predict")}}" method="post">
+            <input type="text" name="ID" placeholder="ID" required="required" /><br>
+            <input type="text" name="Gender" placeholder="Gender" required="required" /><br>
+             <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            <input type="text" name="Height(cm)" placeholder="Height(cm)" required="required" /><br>
+            <input type="text" name="Weight(kg)" placeholder="Weight(kg)" required="required" /><br>
+            <input type="text" name="Waist(cm)" placeholder="Waist(cm)" required="required" /><br>
+            <input type="text" name="Eyesight(left)" placeholder="Eyesight(left)" required="required" /><br>
+            <input type="text" name="Eyesight(right)" placeholder="Eyesight(right)" required="required" /><br>
+            <input type="text" name="Hearing(left)" placeholder="Hearing(left)" required="required" /><br>
+            <input type="text" name="Hearing(right)" placeholder="Hearing(right)" required="required" /><br>
+            <input type="text" name="Systolic" placeholder="Systolic" required="required" /><br>
+            <input type="text" name="Relaxation" placeholder="Relaxation" required="required" /><br>
+            <input type="text" name="Fasting blood sugar" placeholder="Fasting blood sugar" required="required" /><br>
+            <input type="text" name="Cholestrol" placeholder="Cholestrol" required="required" /><br>
+            <input type="text" name="Triglyceride" placeholder="Triglyceride" required="required" /><br>
+            <input type="text" name="HDL" placeholder="HDL" required="required" /><br>
+            <input type="text" name="LDL" placeholder="LDL" required="required" /><br>
+            <input type="text" name="Haemoglobin" placeholder="Haemoglobin" required="required" /><br>
+            <input type="text" name="Urine protein" placeholder="Urine protein" required="required" /><br>
+            <input type="text" name="Serum creatinine" placeholder="Serum creatinine" required="required" /><br>
+            <input type="text" name="AST" placeholder="AST" required="required" /><br>
+            <input type="text" name="ALT" placeholder="ALT" required="required" /><br>
+            <input type="text" name="Gtp" placeholder="Gtp" required="required" /><br>
+            <input type="text" name="Oral" placeholder="Oral" required="required" /><br>
+            <input type="text" name="Dental Caries" placeholder="Dental Caries" required="required" /><br>
+            <input type="text" name="Tartar" placeholder="Tartar" required="required" /><p>
+            <button type='SUBMIT' class="btn btn-primary btn-block btn-large"> Predict the probability of a person being a smoker</button></p>
+        </form>
+        
+        <br>
+        <br>
+        <h4 style="color:Blue;">
+        {{prediction_text}} </h4>
+    
+    </div>
+    
+    </body>
