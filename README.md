@@ -116,7 +116,4 @@ Raise an issue or submit a pull request.
 
 ---
 
-## 📝 License
-
-Distributed under the [MIT License](LICENSE).
 
